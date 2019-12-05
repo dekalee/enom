@@ -1,0 +1,23 @@
+{
+    "name": "dekalee/enom",
+    "description": "A lib to call the enom API",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nicolas Thal",
+            "email": "nico.th4l@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle" : "6"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "^5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dekalee\\Enom\\": "src/Enom"
+        }
+    }
+}
