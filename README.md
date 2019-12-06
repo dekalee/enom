@@ -10,3 +10,31 @@ This php library will be an abstraction for the Enom API.
 
 Usage
 -----
+
+We provide different classes to perform the requests :
+
+- Get domain status
+- Purchase domain
+- Purchase additionnal services
+- Set Dns host
+
+Each of this query should be called with an argument which is the corresponding facade.
+
+For exemple, to purchase the `test.com` domain:
+
+```php
+
+use GuzzleHttp\Client;
+use Dekalee\Enom\PurchaseQuery;
+
+$client = new Client();
+$query = new PurchaseQuery('your-uid', 'your-password', $client, 'https://reseller.enom.com/interface.asp');
+
+$facade = new PurchaseFacade();
+$facade->sld = 'test';
+$facade->tld = 'com';
+
+$order = $query->execute($facade);
+
+var_dump($order);
+```
