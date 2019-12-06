@@ -1,0 +1,19 @@
+language: php
+
+php:
+  - 7.1
+  - 7.2
+  - 7.3
+
+sudo: false
+
+cache:
+  directories:
+    - ~/.composer/cache
+    - ~/composer
+
+install:
+  - composer install --no-progress --prefer-dist
+
+script:
+  - ./vendor/bin/phpspec run
