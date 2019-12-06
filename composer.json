@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Dekalee\\Enom\\": "src/Enom"
+            "Dekalee\\Enom\\": "Dekalee/Enom"
         }
     }
 }
